@@ -374,3 +374,58 @@ section#reviews .divider:after {
 .slide-number {
 	display: none;
 }
+
+*[data-sh-grid] h1,
+*[data-sh-grid] h2,
+*[data-sh-grid] h3,
+*[data-sh-grid] h4,
+*[data-sh-grid] h5 {
+  color: #eeeeee;
+}
+
+#screens h2 {
+  color: #cb8d5d;
+}
+#screens h2 + .divider:after{
+  border-color: #cb8d5d;
+  background-color: #cb8d5d;
+}
+
+/* Grid item foreground*/
+*[data-sh-grid] div.row div h4 + div {
+  /*background-color: rgba(10,10,10,0.5);*/
+  /* Old browsers */
+  background: -moz-linear-gradient(0deg, rgba(9,9,9,0.7) 0%, rgba(255,255,255,0.0) 40%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(9,9,9,0.7)), color-stop(40%, rgba(255,255,255,0.0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(0deg, rgba(9,9,9,0.7) 0%, rgba(255,255,255,0.0) 40%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(0deg, rgba(9,9,9,0.7) 0%, rgba(255,255,255,0.0) 40%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(0deg, rgba(9,9,9,0.7) 0%, rgba(255,255,255,0.0) 40%);
+  /* IE10+ */
+  background: linear-gradient(0deg, rgba(9,9,9,0.7) 0%, rgba(255,255,255,0.0) 40%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=rgba(9,9,9,0.7), endColorstr=rgba(255,255,255,0.0), GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+*[data-sh-grid] div.row div:hover h4 + div {
+  background: transparent;
+}
+
+
+section.story .section-heading + div {
+  font-size: 17px;
+  color: rgba(0,0,0,0,9);
+  text-align: justify;
+}
+
+section.story .divider + p {
+  font-size: 20px;
+}
+
+section.toned {
+  background-color: rgba(220,220,220,1);
+}

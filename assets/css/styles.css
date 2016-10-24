@@ -360,7 +360,7 @@ section#reviews .review-filtering .slick-dots li button {
 section#reviews .review-filtering .slick-dots li button:before {
   display: none;
 }
-section#screens .slider,
+
 section#getApp .slider {
   margin: 50px 0;
 }
@@ -371,11 +371,12 @@ section#getApp .slider div.info {
   padding-top: 10px; 
   padding-bottom: 10px;
   padding-left: 5px;
-  padding-right: 5px
+  padding-right: 5px;
   overflow-y: auto; 
   font-size: 10px;
 }
-section#screens .slider div img,
+
+*[data-sh-grid] div img,
 section#getApp .slider div img {
 /*  -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -386,7 +387,7 @@ section#getApp .slider div img {
   padding-top: 0px;
   display: inline;
 }
-section#screens .slider div h4,
+section#screens *[data-sh-grid] div h4,
 section#getApp .slider div h4 {
   text-align: center;
   /*margin-top: 40px;*/
@@ -394,17 +395,21 @@ section#getApp .slider div h4 {
 
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 10px;
-  margin-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
 
   /*color: #ffb139;*/
   /*background-color: #318628;*/
   background-color: rgba(5,5,5,0.8);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
+
+section#screens .slider div h4 {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
 section#getApp .slider div a {
   color: #ffffff;
   font-size: 12px;
@@ -412,7 +417,7 @@ section#getApp .slider div a {
 section#getApp .slider div h4 {
   background-color: rgba(5,5,5,0.8);
 }
-section#screens .slider .slick-dots li button,
+section#screens *[data-sh-grid] .slick-dots li button,
 section#getApp .slider .slick-dots li button {
   -webkit-border-radius: 5em;
   -moz-border-radius: 5em;
@@ -1047,7 +1052,8 @@ section#getApp h2,
 section#getApp p {
   color: #ffffff;
 }
-section#screens .slider div img {
+section#screens .slider div img,
+section#screens *[data-sh-grid] div img {
   /*border: 2px solid #e5e5e5;*/
 }
 section#screens .slider div.slick-slide {
@@ -1057,6 +1063,12 @@ section#screens .slider div.slick-slide {
   border-radius: 5px;
   background-color: #333333;
 */}
+
+.slider div.slick-slide h4 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 section#getApp .slider div.slick-slide {
   height: 300px;
   overflow-y: hidden;
@@ -1078,3 +1090,80 @@ section.story .divider {
 section.story p {
   color: #333333;
 }
+
+
+/*Grid cells*/
+*[data-sh-grid] div.row {
+  /*margin-bottom: 20px;*/
+}
+
+*[data-sh-grid] div.row > div {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+
+  border: 10px solid #ffffff;
+  border-radius: 7px;
+/*  margin-left: 5px;
+  margin-right: 5px;
+*/
+  height: 235px;
+  max-height:235px;
+  overflow-y: hidden;
+}
+
+*[data-sh-grid] div.row > div:hover {
+  border-width: 7px;
+  transition: .5s all;
+}
+
+*[data-sh-grid] div.row img {
+  vertical-align: bottom;
+}
+
+*[data-sh-grid] div.row > div h4 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Grid item foreground*/
+*[data-sh-grid] div.row div h4 + div {
+  content: '';
+  line-height: 100%;
+  height: 100%;
+}
+
+/* Scroll "anchors" below navbar: */
+div[id] > h2 {
+  padding-top: 63px;
+}
+
+/* Image gallery buttons */
+.gallery-back-button,
+.gallery-forward-button {
+  position: fixed;
+  display: block;
+  top: 10%;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  /*width: 40px;*/
+  /*height: 60px;*/
+  overflow: hidden;
+  color: #eeeeee;
+  background-color: rgba(0,0,0,0.2);
+  border: 3px solid rgba(255,255,255,0.8);
+  border-radius: 50%;
+
+  text-decoration: none;
+}
+
+.gallery-back-button:hover,
+.gallery-forward-button:hover {
+  color: #ffffff;
+}
+
+.gallery-back-button { left:5%;}
+.gallery-forward-button {right:5%;}
