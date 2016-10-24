@@ -1139,8 +1139,8 @@ div[id] > h2 {
 }
 
 /* Image gallery buttons */
-.gallery-back-button,
-.gallery-forward-button {
+a.gallery-back-button,
+a.gallery-forward-button {
   position: fixed;
   display: block;
   top: 10%;
@@ -1153,17 +1153,19 @@ div[id] > h2 {
   /*height: 60px;*/
   overflow: hidden;
   color: #eeeeee;
-  background-color: rgba(0,0,0,0.2);
-  border: 3px solid rgba(255,255,255,0.8);
-  border-radius: 50%;
+
+  text-shadow: 0px 0px 5px rgba(50, 50, 50, 0.8);
+  /*background-color: rgba(0,0,0,0.2);*/
+  /*border: 3px solid rgba(255,255,255,0.8);*/
+  /*border-radius: 50%;*/
 
   text-decoration: none;
 }
 
-.gallery-back-button:hover,
-.gallery-forward-button:hover {
+a.gallery-back-button:hover,
+a.gallery-forward-button:hover {
   color: #ffffff;
 }
 
-.gallery-back-button { left:5%;}
-.gallery-forward-button {right:5%;}
+a.gallery-back-button { left:5%;}
+a.gallery-forward-button {right:5%;}
